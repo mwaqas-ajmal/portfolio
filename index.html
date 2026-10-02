@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Waqas | Senior Full-Stack & Database Repair Engineer</title>
+    <title>Muhammad Waqas | Full-Stack, Backend, AI/ML & Flutter Developer</title>
     <style>
         :root {
             --bg-main: #0b0f19;
@@ -12,6 +12,7 @@
             --primary: #38bdf8;
             --primary-hover: #0284c7;
             --accent: #4ade80;
+            --accent-purple: #c084fc;
             --text-main: #f3f4f6;
             --text-muted: #9ca3af;
         }
@@ -19,8 +20,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
         body { background-color: var(--bg-main); color: var(--text-main); line-height: 1.6; }
         
-        /* Sticky Header */
-        nav { position: sticky; top: 0; background: rgba(11, 15, 25, 0.9); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-color); z-index: 100; padding: 1rem 0; }
+        nav { position: sticky; top: 0; background: rgba(11, 15, 25, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-color); z-index: 100; padding: 1rem 0; }
         .nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 1.5rem; }
         .logo { font-size: 1.25rem; font-weight: 700; color: var(--primary); text-decoration: none; }
         .nav-links { display: flex; gap: 1.5rem; list-style: none; }
@@ -29,42 +29,41 @@
 
         .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
 
-        /* Hero Section */
-        .hero { padding: 5rem 0 3rem; text-align: left; }
+        .hero { padding: 4rem 0 2rem; text-align: left; }
         .hero-badge { display: inline-block; background: rgba(56, 189, 248, 0.1); color: var(--primary); border: 1px solid rgba(56, 189, 248, 0.2); padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 1.5rem; }
-        .hero h1 { font-size: 3rem; font-weight: 800; line-height: 1.2; margin-bottom: 1rem; background: linear-gradient(to right, #f3f4f6, #9ca3af); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .hero p { font-size: 1.2rem; color: var(--text-muted); max-width: 750px; margin-bottom: 2rem; }
+        .hero h1 { font-size: 2.8rem; font-weight: 800; line-height: 1.2; margin-bottom: 1rem; background: linear-gradient(to right, #f3f4f6, #9ca3af); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { font-size: 1.15rem; color: var(--text-muted); max-width: 800px; margin-bottom: 2rem; }
         
         .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
         .stat-card { background: var(--bg-card); border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 12px; text-align: center; }
         .stat-number { font-size: 2rem; font-weight: 800; color: var(--primary); }
         .stat-label { font-size: 0.9rem; color: var(--text-muted); }
 
-        /* Section Title */
         .section-header { margin: 4rem 0 2rem; }
         .section-header h2 { font-size: 1.8rem; font-weight: 700; color: var(--text-main); border-left: 4px solid var(--primary); padding-left: 0.75rem; }
 
-        /* Skills Grid */
-        .skills-wrapper { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+        .skills-wrapper { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
         .skill-box { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.5rem; }
         .skill-box h3 { font-size: 1.1rem; color: var(--primary); margin-bottom: 1rem; }
         .tag-cloud { display: flex; flex-wrap: wrap; gap: 0.5rem; }
         .tag { background: #1e293b; color: #cbd5e1; font-size: 0.85rem; padding: 0.3rem 0.75rem; border-radius: 6px; border: 1px solid #334155; }
 
-        /* Project Cards */
         .project-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; margin-bottom: 2rem; }
         .project-title { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem; }
-        .project-title h3 { font-size: 1.35rem; color: var(--text-main); }
+        .project-title h3 { font-size: 1.4rem; color: var(--text-main); }
         .project-metrics { background: rgba(74, 222, 128, 0.1); border: 1px solid rgba(74, 222, 128, 0.2); color: var(--accent); font-size: 0.85rem; padding: 0.3rem 0.8rem; border-radius: 20px; font-weight: 600; }
-        .project-desc { color: var(--text-muted); margin-bottom: 1.5rem; }
+        .project-metrics.purple { background: rgba(192, 132, 252, 0.1); border-color: rgba(192, 132, 252, 0.2); color: var(--accent-purple); }
+        .project-desc { color: var(--text-muted); margin-bottom: 1rem; }
         
-        /* Code Block Mockup */
+        .feature-list { list-style: none; margin: 1rem 0; color: #cbd5e1; font-size: 0.95rem; }
+        .feature-list li { margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+        .feature-list li::before { content: "✓"; color: var(--primary); font-weight: bold; }
+
         .code-container { background: #030712; border: 1px solid var(--border-color); border-radius: 8px; padding: 1rem; font-family: 'Fira Code', monospace; font-size: 0.85rem; color: #e5e7eb; overflow-x: auto; margin: 1rem 0; }
         .code-keyword { color: #f472b6; }
         .code-func { color: #60a5fa; }
         .code-str { color: #34d399; }
 
-        /* CTA Buttons */
         .btn-group { display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap; }
         .btn-primary { background: var(--primary); color: #000; text-decoration: none; padding: 0.8rem 1.8rem; border-radius: 8px; font-weight: 700; transition: background 0.2s; }
         .btn-primary:hover { background: var(--primary-hover); color: #fff; }
@@ -82,7 +81,7 @@
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Tech Stack</a></li>
-                <li><a href="#projects">Case Studies</a></li>
+                <li><a href="#projects">Live Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -90,135 +89,144 @@
 
     <div class="container">
 
-        <!-- Hero Section -->
         <section class="hero" id="about">
-            <span class="hero-badge">Available for Upwork Contracts & Projects</span>
-            <h1>Full-Stack Engineer & High-Performance Backend Specialist</h1>
-            <p>I diagnose and resolve critical backend failures, database query bottlenecks, broken REST APIs, and server-side script errors. Specialized in Python, PHP, SQL, and enterprise-grade web optimization.</p>
+            <span class="hero-badge">Available for Upwork & Remote Engineering Contracts</span>
+            <h1>Full-Stack, Backend, AI/ML & Flutter Engineer</h1>
+            <p>BSIT Graduate specializing in end-to-end Web & Mobile Development, AI Integration, and High-Performance Backend Debugging. Experienced in building scalable systems using Python, PHP, Flutter, SQL, and Machine Learning workflows.</p>
             
             <div class="btn-group">
                 <a href="#contact" class="btn-primary">Hire Me on Upwork</a>
-                <a href="#projects" class="btn-secondary">View Live Case Studies</a>
+                <a href="#projects" class="btn-secondary">Explore Projects</a>
             </div>
 
             <div class="stats-grid">
                 <div class="stat-card">
+                    <div class="stat-number">1+ Year</div>
+                    <div class="stat-label">Professional Experience</div>
+                </div>
+                <div class="stat-card">
                     <div class="stat-number">99.8%</div>
-                    <div class="stat-label">Bug Resolution Accuracy</div>
+                    <div class="stat-label">Bug Resolution Rate</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">&lt;150ms</div>
-                    <div class="stat-label">Target DB Latency</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">24-48h</div>
-                    <div class="stat-label">Average Debug Turnaround</div>
+                    <div class="stat-number">&lt;100ms</div>
+                    <div class="stat-label">Target API Response</div>
                 </div>
             </div>
         </section>
 
-        <!-- Tech Stack -->
         <section id="skills">
             <div class="section-header">
-                <h2>Technical Core Competencies</h2>
+                <h2>Comprehensive Tech Stack</h2>
             </div>
             <div class="skills-wrapper">
                 <div class="skill-box">
-                    <h3>Backend Architecture</h3>
+                    <h3>Backend Engineering</h3>
                     <div class="tag-cloud">
                         <span class="tag">Python 3.11+</span>
                         <span class="tag">FastAPI</span>
                         <span class="tag">Django</span>
                         <span class="tag">PHP 8.x</span>
                         <span class="tag">Laravel</span>
-                        <span class="tag">Node.js</span>
+                        <span class="tag">RESTful APIs</span>
                     </div>
                 </div>
                 <div class="skill-box">
-                    <h3>Databases & Performance</h3>
+                    <h3>Mobile & Web Dev</h3>
                     <div class="tag-cloud">
+                        <span class="tag">Flutter / Dart</span>
+                        <span class="tag">Cross-Platform Apps</span>
+                        <span class="tag">HTML5 / CSS3</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Responsive UI</span>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <h3>AI / ML & Databases</h3>
+                    <div class="tag-cloud">
+                        <span class="tag">AI Fraud Detection</span>
+                        <span class="tag">Python AI Pipelines</span>
                         <span class="tag">MySQL</span>
                         <span class="tag">PostgreSQL</span>
                         <span class="tag">SQL Query Tuning</span>
-                        <span class="tag">B-Tree Indexing</span>
-                        <span class="tag">ORM Optimization</span>
                     </div>
                 </div>
                 <div class="skill-box">
-                    <h3>DevOps & Web Repair</h3>
+                    <h3>Optimization & SEO</h3>
                     <div class="tag-cloud">
-                        <span class="tag">RESTful API Design</span>
-                        <span class="tag">Webhooks</span>
-                        <span class="tag">JWT Auth</span>
-                        <span class="tag">cPanel / FTP / SSH</span>
-                        <span class="tag">Git & Version Control</span>
+                        <span class="tag">Web Debugging</span>
+                        <span class="tag">cPanel / Servers</span>
+                        <span class="tag">SEO Link Building</span>
+                        <span class="tag">Ahrefs / Semrush</span>
+                        <span class="tag">Git & GitHub</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects -->
         <section id="projects">
             <div class="section-header">
-                <h2>Production Bug Fixes & Case Studies</h2>
+                <h2>Featured Projects & Case Studies</h2>
             </div>
 
-            <!-- Project 1 -->
+            <!-- Project 1: Charity Mobile App -->
             <div class="project-card">
                 <div class="project-title">
-                    <h3>1. High-Traffic SQL Query Optimization & SQLi Patch</h3>
-                    <span class="project-metrics">⚡ Query Time Refactored: 8.4s ➔ 95ms</span>
+                    <h3>1. Smart Charity & Donation Platform (Flutter, AI & Blockchain)</h3>
+                    <span class="project-metrics purple">Mobile App & Backend</span>
                 </div>
-                <p class="project-desc">Fixed critical database locks on a table with 500k+ records during peak operational hours. Replaced nested loop queries with optimized inner joins and implemented composite indexing.</p>
-                
-                <div class="code-container">
-<span class="code-keyword">-- BEFORE (Slow Full Table Scan):</span>
-SELECT * FROM orders WHERE status = 'completed' AND customer_email = 'user@example.com';
+                <p class="project-desc">A complete dual-mode mobile application built with Flutter connecting verified NGOs and individual donors with real-time tracking, local payment gateway support, and AI-driven fraud verification.</p>
+                <ul class="feature-list">
+                    <li><strong>Dual Operational Modes:</strong> Specialized interface for NGO Campaign Management vs General User Donor Experience.</li>
+                    <li><strong>AI Fraud Detection Module:</strong> Automated document and request verification using Machine Learning filters to prevent fraudulent campaigns.</li>
+                    <li><strong>Transparent Ledger & Payments:</strong> Blockchain-inspired transaction history for 100% donation auditability with local payment gateway integration.</li>
+                </ul>
+            </div>
 
-<span class="code-keyword">-- AFTER (Composite B-Tree Index + Parameterized Security):</span>
+            <!-- Project 2: SQL Optimization -->
+            <div class="project-card">
+                <div class="project-title">
+                    <h3>2. Enterprise SQL Query Tuning & Injection Security Patch</h3>
+                    <span class="project-metrics">⚡ Latency Drop: 8.4s ➔ 95ms</span>
+                </div>
+                <p class="project-desc">Diagnosed and refactored high-latency database queries scanning 500,000+ records in production. Implemented B-Tree indexing and replaced unsafe raw queries with prepared statements.</p>
+                <div class="code-container">
+<span class="code-keyword">-- Optimized Dynamic Search Query:</span>
 <span class="code-func">CREATE INDEX</span> idx_status_email <span class="code-func">ON</span> orders(status, customer_email);
-<span class="code-func">SELECT</span> id, order_total, created_at <span class="code-func">FROM</span> orders <span class="code-func">WHERE</span> status = ? <span class="code-func">AND</span> customer_email = ? <span class="code-func">LIMIT</span> 50;
+<span class="code-func">SELECT</span> id, order_total, created_at <span class="code-func">FROM</span> orders 
+<span class="code-func">WHERE</span> status = ? <span class="code-func">AND</span> customer_email = ? 
+<span class="code-func">LIMIT</span> 50 <span class="code-func">OFFSET</span> 0;
                 </div>
             </div>
 
-            <!-- Project 2 -->
+            <!-- Project 3: FastAPI & AI Backend -->
             <div class="project-card">
                 <div class="project-title">
-                    <h3>2. FastAPI Async Event Loop Unblocking & Pydantic Validation</h3>
-                    <span class="project-metrics">⚡ Latency Drop: 2800ms ➔ 110ms</span>
+                    <h3>3. FastAPI High-Concurrency Microservice & AI Pipelines</h3>
+                    <span class="project-metrics">⚡ Response Time: 110ms</span>
                 </div>
-                <p class="project-desc">Resolved server thread locks caused by synchronous database calls inside async handlers. Implemented non-blocking database connections and robust JSON error-handling middleware.</p>
-                
-                <div class="code-container">
-<span class="code-keyword">@app.post</span>(<span class="code-str">"/api/v1/process"</span>)
-<span class="code-keyword">async def</span> <span class="code-func">handle_data</span>(payload: UserPayload):
-    <span class="code-keyword">if not</span> payload.is_valid:
-        <span class="code-keyword">raise</span> HTTPException(status_code=400, detail=<span class="code-str">"Clean validation failure handled."</span>)
-    result = <span class="code-keyword">await</span> async_db_service.execute(payload)
-    <span class="code-keyword">return</span> {<span class="code-str">"status"</span>: <span class="code-str">"success"</span>, <span class="code-str">"data"</span>: result}
-                </div>
+                <p class="project-desc">Fixed async loop bottlenecks in Python FastAPI endpoints. Replaced blocking database calls with SQLAlchemy async handlers and integrated Pydantic schema validation.</p>
             </div>
 
-            <!-- Project 3 -->
+            <!-- Project 4: PHP Laravel Debugging -->
             <div class="project-card">
                 <div class="project-title">
-                    <h3>3. PHP Laravel Session Storage & Checkout Memory Leak Fix</h3>
-                    <span class="project-metrics">🛡️ Zero Downtime Reached</span>
+                    <h3>4. PHP / Laravel Custom E-Commerce Bug Fix & Server Repair</h3>
+                    <span class="project-metrics">🛡️ 100% Checkout Uptime</span>
                 </div>
-                <p class="project-desc">Diagnosed cPanel server HTTP 500 crashes caused by memory leak issues during payment gateway webhook callbacks. Fixed session file locking and restored uninterrupted payment processing.</p>
+                <p class="project-desc">Fixed memory leaks causing cPanel server HTTP 500 errors on payment callbacks, restored broken webhooks, and streamlined database session storage.</p>
             </div>
 
         </section>
 
-        <!-- Contact CTA -->
         <section id="contact" style="text-align: center; background: var(--bg-card); border: 1px solid var(--border-color); padding: 3rem 1.5rem; border-radius: 16px;">
-            <h2 style="font-size: 2rem; margin-bottom: 1rem;">Have a Web Bug, Slow Database, or Broken Script?</h2>
-            <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 2rem;">Send me a message on Upwork with your issue details or error logs, and I'll help you fix it with clean, well-documented code.</p>
-            <a href="https://www.upwork.com" target="_blank" class="btn-primary">Connect on Upwork</a>
+            <h2 style="font-size: 2rem; margin-bottom: 1rem;">Need Help with Full-Stack Web, Mobile, or AI Solutions?</h2>
+            <p style="color: var(--text-muted); max-width: 650px; margin: 0 auto 2rem;">Available for Upwork contracts, web debugging, custom backend development, Flutter apps, and database optimization.</p>
+            <a href="https://www.upwork.com" target="_blank" class="btn-primary">Hire Me on Upwork</a>
         </section>
 
         <footer>
-            <p>&copy; 2026 Muhammad Waqas. Built with clean HTML5 & CSS3. All Rights Reserved.</p>
+            <p>&copy; 2026 Muhammad Waqas — BSIT Engineer | Full-Stack & Flutter Developer</p>
         </footer>
 
     </div>
